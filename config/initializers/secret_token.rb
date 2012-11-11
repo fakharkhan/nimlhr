@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Nimlhr::Application.config.secret_token = 'ad5f1a0b3d34a805d56c204836595906c7e2f01d3b78d4ba632d84714483433641e3db909b7377498c1863f61c7567d05ca3c2987d66a56fa554da3ed0eaeb02'
+Nimlhr::Application.config.secret_token = 'f34e74729ebef70ec5d4712bf7ef76f83a15d7dc42ab0fb0794872868a2745e643172823aa53b9048b3c6b196ae25d9c15fddcbcd20866d0007bb13058a7e3f2'
