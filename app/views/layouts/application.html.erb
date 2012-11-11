@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Nimlhr</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<%= render '/refinery/html_tag' %>
+  <% site_bar = render('/refinery/site_bar', :head => true) -%>
+  <%= render '/refinery/head' %>
+  <body class="body">
+   <div class="page">
+    <%= site_bar -%>
+    <%= render '/refinery/ie6check' if request.env['HTTP_USER_AGENT'] =~ /MSIE/ -%>
+    <div id="page_container">
+      <header id="header">
+        <%= render '/refinery/header' -%>
+      </header>
+      <section id="page">
+        <%= yield %>
+      </section>
 
-<%= yield %>
-
-</body>
+    </div>
+   </div>
+   <footer>
+     <%= render '/refinery/footer' -%>
+   </footer>
+    <%= render '/refinery/javascripts' %>
+  </body>
 </html>
